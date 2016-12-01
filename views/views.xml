@@ -1,0 +1,59 @@
+<openerp>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="partes.list">
+      <field name="name">partes list</field>
+      <field name="model">partes.partes</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="partes.action_window">
+      <field name="name">partes window</field>
+      <field name="res_model">partes.partes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="partes.action_server">
+      <field name="name">partes server</field>
+      <field name="model_id" ref="model_partes_partes"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="partes" id="partes.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="partes.menu_1" parent="partes.menu_root"/>
+    <menuitem name="Menu 2" id="partes.menu_2" parent="partes.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="partes.menu_1_list" parent="partes.menu_1"
+              action="partes.action_window"/>
+    <menuitem name="Server to list" id="partes" parent="partes.menu_2"
+              action="partes.action_server"/>
+    -->
+  </data>
+</openerp>
