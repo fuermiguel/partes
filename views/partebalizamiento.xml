@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--vista del parte de balizamiento. El modelo es único 
+usando herencia múltiple-->
+<openerp>
+    <data>
+	 <record model="ir.ui.view" id="view_balizamiento_tree">
+            <field name="name">balizamiento.tree</field>
+            <field name="model">partes.balizamiento</field>
+            <field name="arch" type="xml">
+                <tree string="Listado de cursos">
+                  
+                </tree>
+            </field>
+        </record>
+	<record model="ir.ui.view" id="view_balizamiento_form">
+		<field name="name">balizamiento.form</field>
+		<field name="model">partes.balizamiento</field>
+		<field name="arch" type="xml">
+			<form string="formulario de balizamiento">	
+				<sheet>
+					<group>
+						
+					</group>
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="balizamiento_list_action">
+		<field name="name">Balizamiento</field>
+		<field name="res_model">partes.balizamiento</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<!--<field name="help" type="html">
+			<p class="oe_view_nocontent_create"> crear el primer curso </p>
+		</field>-->
+	</record>
+	
+	
+	<menuitem id="main_partes_menu" name="Partes diarios"/>
+	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
+	<menuitem id="partes_balizamiento_menu" name="balizamiento" parent="partes_menu" action="balizamiento_list_action"/>
+	
+   </data>
+</openerp>
