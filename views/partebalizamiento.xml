@@ -18,9 +18,99 @@ usando herencia múltiple-->
 		<field name="arch" type="xml">
 			<form string="formulario de balizamiento">	
 				<sheet>
+					<div align="center" style="color:#0000FF"><h1>div</h1></div>
+					<!-- no puedo usar un campo que no esté en el modelo -->
+					<!-- <field name="image" widget="image" class="oe_avatar" 
+					options="{&quot;preview_image&quot;: &quot;image_medium&quot;,
+					 &quot;size&quot;: [90, 90]}"/>-->
 					<group>
-						
+						<h1>group</h1>
 					</group>
+					<group>
+						<h1>uno</h1>
+						<h1>dos</h1>
+					</group>
+					<notebook colspan="4">
+						  <page name="mangas" string="MANGAS" autofocus="autofocus">
+						  <div></div>
+						  </page>
+						  <page name="papis" string="PAPIS">
+						  </page>
+						  <page name="smp" string="SMP">
+						  </page>
+						  <page name="sistema" string="SISTEMA">
+						  <group>
+						  	<div>
+						  		<h1>Barra de parada</h1>
+						  		<group col="4">
+						  			<div>
+						  				<h3>E1</h3>
+						  				<h3>E2</h3>
+						  				<h3>E9</h3>
+						  				<h3>E10</h3>
+						  			</div>
+						  			<div colspan="3">
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  			</div>
+						  		</group>
+						  	</div>
+						  	<div>
+						  		<h1>Barra antiintrusion</h1>
+						  		<group col="4">
+						  			<div>
+						  				<h3>E3</h3>
+						  				<h3>E4</h3>
+						  				<h3>E5</h3>
+						  				<h3>E6</h3>
+						  			</div>
+						  			<div colspan="3">
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  			</div>
+						  		</group>
+						  	</div>
+						  	<div>
+						  		<h1>Pista</h1>
+						  		<group col="4">
+						  			<div>
+						  				<h3>BV</h3>
+						  				<h3>EV</h3>
+						  				<h3>U19</h3>
+						  				<h3>U01</h3>
+						  			</div>
+						  			<div colspan="3">
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  			</div>
+						  		</group>
+						  	</div>
+						  	<div>
+						  		<h1>Rodadura</h1>
+						  		<group col="4">
+						  			<div>
+						  				<h3>T1/T3</h3>
+						  				<h3>T4/T8</h3>
+						  				<h3>ER E4</h3>
+						  				<h3>ER E7</h3>
+						  			</div>
+						  			<div colspan="3">
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  				<h3>campo</h3>
+						  			</div>
+						  		</group>
+						  	</div>
+						  </group>
+						  </page>
+					</notebook>
 				</sheet>								
 			</form>
 		</field>
