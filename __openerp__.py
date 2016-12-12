@@ -29,7 +29,10 @@
         # 'security/ir.model.access.csv',
         #'views/views.xml',
         'views/templates.xml',
-        'views/partebalizamiento.xml'
+        'views/partebalizamiento.xml',
+        'views/grupos.xml',
+        'views/circuitos.xml',
+        #'datas/partes_datas.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

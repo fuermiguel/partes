@@ -25,7 +25,8 @@ class Grupos(models.Model):
 
     nombreGrupo = fields.Char(string="NombreGrupo", required=True)
     id_grupo = fields.One2many('partes.sistemas', 'id_grupo')
-    id_circuito = fields.Many2one('partes.circuitos')
+    #id_circuito = fields.Many2one('partes.circuitos', 'id_circuito')
+    ids_circuito = fields.One2many('partes.circuitos', 'id_grupo','Grupos')
 
 
 class Circuitos(models.Model):
@@ -33,7 +34,8 @@ class Circuitos(models.Model):
 
     nombreCircuito = fields.Char(string="NombreCircuito", required=True)
     observaciones = fields.Text(string="Observaciones")
-    id_grupo_ = fields.One2many('partes.grupos', 'id_circuito')
+    id_grupo = fields.Many2one('partes.grupos', 'Grupo' )
+    #id_circuito = fields.One2many('partes.grupos', 'id_circuito')
 
     id_apagada = fields.Many2one('partes.apagadas')
     id_reparada = fields.Many2one('partes.reparadas')

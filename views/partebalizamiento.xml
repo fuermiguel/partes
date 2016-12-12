@@ -3,15 +3,6 @@
 usando herencia múltiple-->
 <openerp>
     <data>
-	 <record model="ir.ui.view" id="view_balizamiento_tree">
-            <field name="name">balizamiento.tree</field>
-            <field name="model">partes.balizamiento</field>
-            <field name="arch" type="xml">
-                <tree string="Listado de cursos">
-                  
-                </tree>
-            </field>
-        </record>
 	<record model="ir.ui.view" id="view_balizamiento_form">
 		<field name="name">balizamiento.form</field>
 		<field name="model">partes.balizamiento</field>
@@ -23,6 +14,7 @@ usando herencia múltiple-->
 					<!-- <field name="image" widget="image" class="oe_avatar" 
 					options="{&quot;preview_image&quot;: &quot;image_medium&quot;,
 					 &quot;size&quot;: [90, 90]}"/>-->
+					 
 					<group>
 						<h1>group</h1>
 					</group>
@@ -41,7 +33,8 @@ usando herencia múltiple-->
 						  <page name="sistema" string="SISTEMA">
 						  <group>
 						  	<div>
-						  		<h1>Barra de parada</h1>
+						  <h1>Barra de parada</h1>
+						  		
 						  		<group col="4">
 						  			<div>
 						  				<h3>E1</h3>

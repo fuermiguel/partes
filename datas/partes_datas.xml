@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+<!-- Data to load -->
+<record model="partes.grupos" id="partes_grupos_eco1">
+<field name="nombreGrupo">E1</field>
+</record>
+<record model="partes.grupos" id="partes_grupos_eco2">
+<field name="nombreGrupo">E2</field>
+</record>
+<record model="partes.grupos" id="partes_grupos_eco3">
+<field name="nombreGrupo">E3</field>
+</record>
+<record model="partes.grupos" id="partes_grupos_eco4">
+<field name="nombreGrupo">E4</field>
+</record>
+</data>
+</openerp>

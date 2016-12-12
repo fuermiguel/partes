@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--vista del parte de balizamiento. El modelo es único 
+usando herencia múltiple-->
+<openerp>
+    <data>
+    	<record model="ir.ui.view" id="view_grupos_tree">
+            <field name="name">grupos.tree</field>
+            <field name="model">partes.grupos</field>
+            <field name="arch" type="xml">
+                <tree string="Listado de grupos">
+                   	<field name="nombreGrupo"/>
+                </tree>
+            </field>
+        </record>
+	<record model="ir.ui.view" id="view_grupos_form">
+		<field name="name">grupos.form</field>
+		<field name="model">partes.grupos</field>
+		<field name="arch" type="xml">
+			<form string="formulario de cursos">	
+				<sheet>
+					<group>
+						<field name="nombreGrupo"/>
+						<field name="ids_circuito"/>
+					</group>
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="grupos_list_action">
+		<field name="name">Grupos</field>
+		<field name="res_model">partes.grupos</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	
+	
+	<menuitem id="main_partes_menu" name="Partes diarios"/>
+	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
+	<menuitem id="partes_configuracion_menu" name="configuracion" parent="main_partes_menu"/>
+	<menuitem id="partes_grupos_menu" name="Grupos" parent="partes_configuracion_menu" action="grupos_list_action"/>
+    </data>
+</openerp>
