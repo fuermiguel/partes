@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data> 
+    
+    <record model="ir.ui.view" id="view_apagadas_tree">
+		<field name="name">apagadas.tree</field>
+		<field name="model">partes.apagadas</field>
+		<field name="arch" type="xml">
+			<tree string="formulario de papis">	
+				<field name="numeroApagada"/>											
+			</tree>
+		</field>
+	</record>
+    	
+	<record model="ir.ui.view" id="view_apagadas_form">
+		<field name="name">apagadas.form</field>
+		<field name="model">partes.apagadas</field>
+		<field name="arch" type="xml">
+			<form string="formulario de papis">	
+				<sheet>
+					<group>
+						<field name="numeroApagada"/>
+					</group>	
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="apagadas_list_action">
+		<field name="name">Papis</field>
+		<field name="res_model">partes.apagadas</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+	</record>
+   </data>
+</openerp>

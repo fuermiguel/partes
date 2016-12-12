@@ -40,6 +40,6 @@ usando herencia múltiple-->
 	<menuitem id="main_partes_menu" name="Partes diarios"/>
 	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
 	<menuitem id="partes_configuracion_menu" name="configuracion" parent="main_partes_menu"/>
-	<menuitem id="partes_grupos_menu" name="Grupos" parent="partes_configuracion_menu" action="grupos_list_action"/>
+	<menuitem id="partes_configuracion_grupos_menu" name="Grupos" parent="partes_configuracion_menu" action="grupos_list_action"/>
     </data>
 </openerp>

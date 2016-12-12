@@ -22,6 +22,7 @@ usando herencia múltiple-->
 					<group>
 						<field name="nombreCircuito"/>
 						<field name="id_grupo"/>
+						<field name="id_apagadas"/>
 					</group>
 				</sheet>								
 			</form>
@@ -41,6 +42,6 @@ usando herencia múltiple-->
 	<menuitem id="main_partes_menu" name="Partes diarios"/>
 	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
 	<menuitem id="partes_configuracion_menu" name="configuracion" parent="main_partes_menu"/>
-	<menuitem id="partes_circuitos_menu" name="Circuitos" parent="partes_configuracion_menu" action="circuitos_list_action"/>
+	<menuitem id="partes_configuracion_circuitos_menu" name="Circuitos" parent="partes_configuracion_menu" action="circuitos_list_action"/>
     </data>
 </openerp>

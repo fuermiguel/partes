@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--vista del parte de balizamiento. El modelo es único 
+usando herencia múltiple-->
+<openerp>
+    <data> 
+    	<record model="ir.ui.view" id="view_papis_tree">
+            <field name="name">papis.tree</field>
+            <field name="model">partes.papis</field>
+            <field name="arch" type="xml">
+                <tree string="Listado de papis">
+                   	<field name="nombrePapi"/>
+             
+                </tree>
+            </field>
+        </record>
+	<record model="ir.ui.view" id="view_papis_form">
+		<field name="name">papis.form</field>
+		<field name="model">partes.papis</field>
+		<field name="arch" type="xml">
+			<form string="formulario de papis">	
+				<sheet>
+					<group>
+						<field name="nombrePapi"/>
+						<field name="fundido"/>
+						<field name="iluminacion"/>
+						<field name="danio"/>
+						<field name="limpieza"/>
+					</group>
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="papis_list_action">
+		<field name="name">Papis</field>
+		<field name="res_model">partes.papis</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	
+	
+	<menuitem id="main_partes_menu" name="Partes diarios"/>
+	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
+	<menuitem id="partes_configuracion_menu" name="configuracion" parent="main_partes_menu"/>
+	<menuitem id="partes_configuracion_papis_menu" name="Papis" parent="partes_configuracion_menu" action="papis_list_action"/>
+   </data>
+</openerp>

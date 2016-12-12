@@ -32,6 +32,9 @@
         'views/partebalizamiento.xml',
         'views/grupos.xml',
         'views/circuitos.xml',
+        'views/papis.xml',
+        'views/mangas.xml',
+        'views/apagadas.xml'
         #'datas/partes_datas.xml'
     ],
     # only loaded in demonstration mode

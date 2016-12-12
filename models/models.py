@@ -37,27 +37,28 @@ class Circuitos(models.Model):
     id_grupo = fields.Many2one('partes.grupos', 'Grupo' )
     #id_circuito = fields.One2many('partes.grupos', 'id_circuito')
 
-    id_apagada = fields.Many2one('partes.apagadas')
-    id_reparada = fields.Many2one('partes.reparadas')
+    id_apagadas = fields.One2many('partes.apagadas','id_apagada','Apagadas')
+    id_reparadas = fields.Many2one('partes.reparadas')
 
 
 class Apagadas(models.Model):
     _name = 'partes.apagadas'
 
-    numeroApagada = fields.Integer(string="Apagadas")
-    id_apagada_ = fields.One2many('partes.circuitos', 'id_apagada')
+    numeroApagada = fields.Integer(string="Número apagada")
+    id_apagada = fields.Many2one('partes.circuitos', 'numeroApagada')
 
 
 class Reparadas(models.Model):
     _name = 'partes.reparadas'
 
     numeroReparada = fields.Integer(string="Reparadas")
-    id_reparada = fields.One2many('partes.circuitos', 'id_reparada')
+    id_reparada = fields.One2many('partes.circuitos', 'id_reparadas')
 
 
 class Papis(models.Model):
     _name = 'partes.papis'
 
+    nombrePapi = fields.Char(string="Nombre", required=True)
     id_papis = fields.One2many('partes.balizamiento', 'id_papis')
     fundido = fields.Boolean(string='Lámparas fundidas')
     iluminacion = fields.Boolean(string='Iluminación uniforme')
@@ -69,7 +70,7 @@ class Mangas(models.Model):
     _name = 'partes.mangas'
 
     id_mangas = fields.One2many('partes.balizamiento', 'id_mangas')
-    name = fields.Char(string="Nombre", required=True)
+    nombreManga = fields.Char(string="Nombre", required=True)
     luz = fields.Boolean(string='Estado de las luces')
     tela = fields.Boolean(string='Estado de la tela')
 

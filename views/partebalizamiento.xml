@@ -124,6 +124,10 @@ usando herencia múltiple-->
 	<menuitem id="main_partes_menu" name="Partes diarios"/>
 	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
 	<menuitem id="partes_balizamiento_menu" name="balizamiento" parent="partes_menu" action="balizamiento_list_action"/>
-	
+	<menuitem id="partes_balizamiento_papis_menu" name="Papis" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
+	<menuitem id="partes_balizamiento_mangas_menu" name="Mangas" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
+	<menuitem id="partes_balizamiento_incidenciasSmp_menu" name="Incidencias SMP" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
+	<menuitem id="partes_balizamiento_anomaliasLetreros_menu" name="Anomalias Letreros" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
+	<menuitem id="partes_balizamiento_sistema_menu" name="Sistema" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
    </data>
 </openerp>

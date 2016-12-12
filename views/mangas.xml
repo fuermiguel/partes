@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--vista del parte de balizamiento. El modelo es único 
+usando herencia múltiple-->
+<openerp>
+    <data>
+    	<record model="ir.ui.view" id="view_mangas_tree">
+            <field name="name">mangas.tree</field>
+            <field name="model">partes.mangas</field>
+            <field name="arch" type="xml">
+                <tree string="Listado de mangas">
+                   	<field name="nombreManga"/>
+             
+                </tree>
+            </field>
+        </record>
+	<record model="ir.ui.view" id="view_mangas_form">
+		<field name="name">mangas.form</field>
+		<field name="model">partes.mangas</field>
+		<field name="arch" type="xml">
+			<form string="formulario de mangas">	
+				<sheet>
+					<group>
+						<field name="nombreManga"/>
+						<field name="luz"/>
+						<field name="tela"/>
+					</group>
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="mangas_list_action">
+		<field name="name">Mangas</field>
+		<field name="res_model">partes.mangas</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	
+	
+	<menuitem id="main_partes_menu" name="Partes diarios"/>
+	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
+	<menuitem id="partes_configuracion_menu" name="configuracion" parent="main_partes_menu"/>
+	<menuitem id="partes_configuracion_mangas_menu" name="Magas" parent="partes_configuracion_menu" action="mangas_list_action"/>
+    </data>
+</openerp>
