@@ -21,8 +21,6 @@ usando herencia múltiple-->
 				<sheet>
 					<group>
 						<field name="nombreManga"/>
-						<field name="luz"/>
-						<field name="tela"/>
 					</group>
 				</sheet>								
 			</form>
@@ -38,10 +36,5 @@ usando herencia múltiple-->
 	</record>
 	
 	
-	
-	<menuitem id="main_partes_menu" name="Partes diarios"/>
-	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
-	<menuitem id="partes_configuracion_menu" name="configuracion" parent="main_partes_menu"/>
-	<menuitem id="partes_configuracion_mangas_menu" name="Magas" parent="partes_configuracion_menu" action="mangas_list_action"/>
     </data>
 </openerp>

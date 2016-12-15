@@ -21,10 +21,7 @@ usando herencia múltiple-->
 				<sheet>
 					<group>
 						<field name="nombrePapi"/>
-						<field name="fundido"/>
-						<field name="iluminacion"/>
-						<field name="danio"/>
-						<field name="limpieza"/>
+						
 					</group>
 				</sheet>								
 			</form>
@@ -41,9 +38,6 @@ usando herencia múltiple-->
 	
 	
 	
-	<menuitem id="main_partes_menu" name="Partes diarios"/>
-	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
-	<menuitem id="partes_configuracion_menu" name="configuracion" parent="main_partes_menu"/>
-	<menuitem id="partes_configuracion_papis_menu" name="Papis" parent="partes_configuracion_menu" action="papis_list_action"/>
+	
    </data>
 </openerp>

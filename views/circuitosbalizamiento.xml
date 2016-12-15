@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--vista del parte de balizamiento. El modelo es único 
+usando herencia múltiple-->
+<openerp>
+    <data>
+    	<record model="ir.ui.view" id="view_circuitosbalizamiento_tree">
+            <field name="name">circuitosbalizamiento.tree</field>
+            <field name="model">partes.circuitosbalizamiento</field>
+            <field name="arch" type="xml">
+                <tree string="Listado de circuitosbalizamiento">
+                   	<field name="nombreCircuito"/>
+                   	<field name="id_apagadas"/>
+                </tree>
+            </field>
+        </record>
+	<record model="ir.ui.view" id="view_circuitosbalizamiento_form">
+		<field name="name">circuitosbalizamiento.form</field>
+		<field name="model">partes.circuitosbalizamiento</field>
+		<field name="arch" type="xml">
+			<form string="formulario de circuitosbalizamiento">	
+				<sheet>
+					<group>
+						<field name="nombreCircuito"/>
+						<field name="observaciones" />
+						<field name="id_grupo"/>
+						<field name="id_apagadas"/>
+					</group>
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="circuitosbalizamiento_list_action">
+		<field name="name">CircuitosBalizamiento</field>
+		<field name="res_model">partes.circuitosbalizamiento</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+    </data>
+</openerp>

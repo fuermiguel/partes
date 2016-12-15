@@ -34,7 +34,11 @@
         'views/circuitos.xml',
         'views/papis.xml',
         'views/mangas.xml',
-        'views/apagadas.xml'
+        'views/apagadas.xml',
+        'views/mangasbalizamiento.xml',
+        'views/papisbalizamiento.xml',
+        'views/circuitosbalizamiento.xml',
+        'views/menu.xml',
         #'datas/partes_datas.xml'
     ],
     # only loaded in demonstration mode

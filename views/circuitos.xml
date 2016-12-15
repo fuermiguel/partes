@@ -14,15 +14,14 @@ usando herencia múltiple-->
             </field>
         </record>
 	<record model="ir.ui.view" id="view_circuitos_form">
-		<field name="name">grupos.form</field>
+		<field name="name">circuitos.form</field>
 		<field name="model">partes.circuitos</field>
 		<field name="arch" type="xml">
 			<form string="formulario de circuitos">	
 				<sheet>
 					<group>
 						<field name="nombreCircuito"/>
-						<field name="id_grupo"/>
-						<field name="id_apagadas"/>
+						
 					</group>
 				</sheet>								
 			</form>
@@ -38,10 +37,5 @@ usando herencia múltiple-->
 	</record>
 	
 	
-	
-	<menuitem id="main_partes_menu" name="Partes diarios"/>
-	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
-	<menuitem id="partes_configuracion_menu" name="configuracion" parent="main_partes_menu"/>
-	<menuitem id="partes_configuracion_circuitos_menu" name="Circuitos" parent="partes_configuracion_menu" action="circuitos_list_action"/>
     </data>
 </openerp>

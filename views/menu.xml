@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+
+<menuitem id="main_partes_menu" name="Partes diarios"/>
+	<menuitem id="partes_menu" name="Partes diarios" parent="main_partes_menu" sequence="10"/>
+		<menuitem id="partes_balizamiento_menu" name="Balizamiento" parent="partes_menu"  action="balizamiento_list_action"/>
+	<menuitem id="partes_configuracion_menu" name="Configuracion" parent="main_partes_menu" sequence="20"/>
+		<menuitem id="partes_configuracion_grupos_menu" name="Grupos" parent="partes_configuracion_menu" action="grupos_list_action"/>
+		<menuitem id="partes_configuracion_mangas_menu" name="Magas" parent="partes_configuracion_menu" action="mangas_list_action"/>
+		<menuitem id="partes_configuracion_papis_menu" name="Papis" parent="partes_configuracion_menu" action="papis_list_action"/>
+		<menuitem id="partes_configuracion_circuitos_menu" name="Circuitos" parent="partes_configuracion_menu" action="circuitos_list_action"/>
+</openerp>

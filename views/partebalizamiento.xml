@@ -1,113 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--vista del parte de balizamiento. El modelo es único 
-usando herencia múltiple-->
 <openerp>
     <data>
+	<record model="ir.ui.view" id="view_balizamiento_tree">
+            <field name="name">balizamiento.tree</field>
+            <field name="model">partes.balizamiento</field>
+            <field name="arch" type="xml">
+                <tree string="Listado de balizamiento">
+                   	<field name="numero_ot"/>
+                   	<field name="fecha" /> 
+                </tree>
+            </field>
+        </record>
 	<record model="ir.ui.view" id="view_balizamiento_form">
 		<field name="name">balizamiento.form</field>
 		<field name="model">partes.balizamiento</field>
 		<field name="arch" type="xml">
 			<form string="formulario de balizamiento">	
 				<sheet>
-					<div align="center" style="color:#0000FF"><h1>div</h1></div>
-					<!-- no puedo usar un campo que no esté en el modelo -->
-					<!-- <field name="image" widget="image" class="oe_avatar" 
-					options="{&quot;preview_image&quot;: &quot;image_medium&quot;,
-					 &quot;size&quot;: [90, 90]}"/>-->
-					 
-					<group>
-						<h1>group</h1>
+					<group col="8">
+						
+							<h2>Número OT:</h2>
+							<h2><field name="numero_ot" colspan="2"></field></h2>
+					
+						
+							<h2>Fecha:</h2>
+							<h1><field name="fecha" colspan="2"></field></h1>
+									
 					</group>
 					<group>
-						<h1>uno</h1>
-						<h1>dos</h1>
+						<field name="id_mangas"/>
+						<field name="id_papis"/>
 					</group>
-					<notebook colspan="4">
-						  <page name="mangas" string="MANGAS" autofocus="autofocus">
-						  <div></div>
-						  </page>
-						  <page name="papis" string="PAPIS">
-						  </page>
-						  <page name="smp" string="SMP">
-						  </page>
-						  <page name="sistema" string="SISTEMA">
-						  <group>
-						  	<div>
-						  <h1>Barra de parada</h1>
-						  		
-						  		<group col="4">
-						  			<div>
-						  				<h3>E1</h3>
-						  				<h3>E2</h3>
-						  				<h3>E9</h3>
-						  				<h3>E10</h3>
-						  			</div>
-						  			<div colspan="3">
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  			</div>
-						  		</group>
-						  	</div>
-						  	<div>
-						  		<h1>Barra antiintrusion</h1>
-						  		<group col="4">
-						  			<div>
-						  				<h3>E3</h3>
-						  				<h3>E4</h3>
-						  				<h3>E5</h3>
-						  				<h3>E6</h3>
-						  			</div>
-						  			<div colspan="3">
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  			</div>
-						  		</group>
-						  	</div>
-						  	<div>
-						  		<h1>Pista</h1>
-						  		<group col="4">
-						  			<div>
-						  				<h3>BV</h3>
-						  				<h3>EV</h3>
-						  				<h3>U19</h3>
-						  				<h3>U01</h3>
-						  			</div>
-						  			<div colspan="3">
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  			</div>
-						  		</group>
-						  	</div>
-						  	<div>
-						  		<h1>Rodadura</h1>
-						  		<group col="4">
-						  			<div>
-						  				<h3>T1/T3</h3>
-						  				<h3>T4/T8</h3>
-						  				<h3>ER E4</h3>
-						  				<h3>ER E7</h3>
-						  			</div>
-						  			<div colspan="3">
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  				<h3>campo</h3>
-						  			</div>
-						  		</group>
-						  	</div>
-						  </group>
-						  </page>
-					</notebook>
+					<group>
+						<field name="id_circuitos"/>
+					</group>
+					
 				</sheet>								
 			</form>
 		</field>
 	</record>
+	
 	
 
 	<record model="ir.actions.act_window" id="balizamiento_list_action">
@@ -115,19 +47,7 @@ usando herencia múltiple-->
 		<field name="res_model">partes.balizamiento</field>
 		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
-		<!--<field name="help" type="html">
-			<p class="oe_view_nocontent_create"> crear el primer curso </p>
-		</field>-->
 	</record>
 	
-	
-	<menuitem id="main_partes_menu" name="Partes diarios"/>
-	<menuitem id="partes_menu" name="partes diarios" parent="main_partes_menu"/>
-	<menuitem id="partes_balizamiento_menu" name="balizamiento" parent="partes_menu" action="balizamiento_list_action"/>
-	<menuitem id="partes_balizamiento_papis_menu" name="Papis" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
-	<menuitem id="partes_balizamiento_mangas_menu" name="Mangas" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
-	<menuitem id="partes_balizamiento_incidenciasSmp_menu" name="Incidencias SMP" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
-	<menuitem id="partes_balizamiento_anomaliasLetreros_menu" name="Anomalias Letreros" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
-	<menuitem id="partes_balizamiento_sistema_menu" name="Sistema" parent="partes_balizamiento_menu" action="balizamiento_list_action"/>
-   </data>
+    </data>
 </openerp>

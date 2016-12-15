@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--vista del parte de balizamiento. El modelo es único 
+usando herencia múltiple-->
+<openerp>
+    <data>
+    	<record model="ir.ui.view" id="view_papisbalizamiento_tree">
+            <field name="name">papisbalizamiento.tree</field>
+            <field name="model">partes.papisbalizamiento</field>
+            <field name="arch" type="xml">
+                <tree string="Listado de papis">
+                   	<field name="nombrePapi"/>
+                   	<field name="fundido"/>
+					<field name="iluminacion"/>
+					<field name="danio"/>
+					<field name="limpieza"/>
+					
+             
+                </tree>
+            </field>
+        </record>
+	<record model="ir.ui.view" id="view_papisbalizamiento_form">
+		<field name="name">papisbalizamiento.form</field>
+		<field name="model">partes.papisbalizamiento</field>
+		<field name="arch" type="xml">
+			<form string="formulario de papis">	
+				<sheet>
+					<group>
+						<field name="papis"/>
+						<field name="fundido"/>
+						<field name="iluminacion"/>
+						<field name="danio"/>
+						<field name="limpieza"/>
+					
+					</group>
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="papisbalizamiento_list_action">
+		<field name="name">Papis</field>
+		<field name="res_model">partes.papisbalizamiento</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+    </data>
+</openerp>

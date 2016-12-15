@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--vista del parte de balizamiento. El modelo es único 
+usando herencia múltiple-->
+<openerp>
+    <data>
+    	<record model="ir.ui.view" id="view_mangasbalizamiento_tree">
+            <field name="name">mangasbalizamiento.tree</field>
+            <field name="model">partes.mangasbalizamiento</field>
+            <field name="arch" type="xml">
+                <tree string="Listado de mangas">
+                   	<field name="mangas"/>
+                   	<field name="luz"/>
+					<field name="tela"/>
+             
+                </tree>
+            </field>
+        </record>
+	<record model="ir.ui.view" id="view_mangasbalizamiento_form">
+		<field name="name">mangasbalizamiento.form</field>
+		<field name="model">partes.mangasbalizamiento</field>
+		<field name="arch" type="xml">
+			<form string="formulario de mangas">	
+				<sheet>
+					<group>
+						
+						<field name="mangas"/>
+						<field name="luz"/>
+						<field name="tela"/>
+					</group>
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="mangasbalizamiento_list_action">
+		<field name="name">Mangas</field>
+		<field name="res_model">partes.mangasbalizamiento</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+    </data>
+</openerp>
