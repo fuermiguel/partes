@@ -10,6 +10,7 @@ usando herencia múltiple-->
                 <tree string="Listado de circuitosbalizamiento">
                    	<field name="nombreCircuito"/>
                    	<field name="id_apagadas"/>
+                   	<field name="id_reparadas"/>
                 </tree>
             </field>
         </record>
@@ -24,6 +25,7 @@ usando herencia múltiple-->
 						<field name="observaciones" />
 						<field name="id_grupo"/>
 						<field name="id_apagadas"/>
+						<field name="id_reparadas"/>
 					</group>
 				</sheet>								
 			</form>

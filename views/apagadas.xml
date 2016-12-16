@@ -17,7 +17,7 @@
 		<field name="name">apagadas.form</field>
 		<field name="model">partes.apagadas</field>
 		<field name="arch" type="xml">
-			<form string="formulario de papis">	
+			<form string="formulario apagadas">	
 				<sheet>
 					<group>
 						<field name="numeroApagada"/>
@@ -29,7 +29,7 @@
 	
 
 	<record model="ir.actions.act_window" id="apagadas_list_action">
-		<field name="name">Papis</field>
+		<field name="name">Apagadas</field>
 		<field name="res_model">partes.apagadas</field>
 		<field name="view_type">form</field>
 		<field name="view_mode">form</field>

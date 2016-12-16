@@ -27,21 +27,18 @@ class Grupos(models.Model):
     _rec_name = 'nombreGrupo'
 
     nombreGrupo = fields.Char(string="NombreGrupo", required=True)
-  #  id_grupo = fields.One2many('partes.sistemas', 'id_grupo')
-    #id_circuito = fields.Many2one('partes.circuitos', 'id_circuito')
-   # ids_circuito = fields.One2many('partes.circuitos', 'id_grupo','Grupos')
+
 
 class CircuitosBalizamiento(models.Model):
     _name = 'partes.circuitosbalizamiento'
     _rec_name = 'nombreCircuito'
     
-    #nombreCircuito = fields.Char(string="Nombre", required=True)
     nombreCircuito = fields.Many2one('partes.circuitos', 'Nombre Circuito')
     observaciones = fields.Text(string="Observaciones")
     id_grupo = fields.Many2one('partes.grupos', 'Grupo' )
     id_circuitos = fields.Many2one('partes.balizamiento')
-    id_apagadas = fields.One2many('partes.apagadas','numeroApagada','Apagadas')
-    id_reparadas = fields.Many2one('partes.reparadas')
+    id_apagadas = fields.One2many('partes.apagadas','id_apagada','Apagadas')
+    id_reparadas = fields.One2many('partes.reparadas','id_reparada','Reparadas')
     
     
 class Circuitos(models.Model):
@@ -53,24 +50,26 @@ class Circuitos(models.Model):
 
 class Apagadas(models.Model):
     _name = 'partes.apagadas'
+    _rec_name = 'numeroApagada'
 
     numeroApagada = fields.Integer(string="Número apagada")
-    #id_apagada = fields.Many2one('partes.circuitos', 'numeroApagada')
+    id_apagada = fields.Many2one('partes.circuitosbalizamiento')
 
 
 class Reparadas(models.Model):
     _name = 'partes.reparadas'
+    _rec_name = 'numeroReparada'
 
-    numeroReparada = fields.Integer(string="Reparadas")
-   # id_reparada = fields.One2many('partes.circuitos', 'id_reparadas')
+    numeroReparada = fields.Integer(string="Número reparada")
+    id_reparada = fields.Many2one('partes.circuitosbalizamiento')
     
     
 class PapisBalizamiento(models.Model):
     _name = 'partes.papisbalizamiento'
-    _rec_name = 'nombrePapi'
+    _rec_name = 'papis'
     
-    nombrePapi = fields.Char(string="Nombre", required=True)
-    papis = fields.Many2one('partes.papis')
+    #nombrePapi = fields.Char(string="Nombre", required=True)
+    papis = fields.Many2one('partes.papis', 'Nombre del Papi')
     id_papis = fields.Many2one('partes.balizamiento')
     fundido = fields.Boolean(string='Lámparas fundidas')
     iluminacion = fields.Boolean(string='Iluminación uniforme')

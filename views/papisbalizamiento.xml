@@ -8,7 +8,7 @@ usando herencia múltiple-->
             <field name="model">partes.papisbalizamiento</field>
             <field name="arch" type="xml">
                 <tree string="Listado de papis">
-                   	<field name="nombrePapi"/>
+                   	<field name="papis"/>
                    	<field name="fundido"/>
 					<field name="iluminacion"/>
 					<field name="danio"/>

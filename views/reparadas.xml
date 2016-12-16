@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data> 
+    
+    <record model="ir.ui.view" id="view_reparadas_tree">
+		<field name="name">reparadas.tree</field>
+		<field name="model">partes.reparadas</field>
+		<field name="arch" type="xml">
+			<tree string="formulario de papis">	
+				<field name="numeroReparada"/>											
+			</tree>
+		</field>
+	</record>
+    	
+	<record model="ir.ui.view" id="view_reparadas_form">
+		<field name="name">reparadas.form</field>
+		<field name="model">partes.reparadas</field>
+		<field name="arch" type="xml">
+			<form string="formulario de reparadas">	
+				<sheet>
+					<group>
+						<field name="numeroReparada"/>
+					</group>	
+				</sheet>								
+			</form>
+		</field>
+	</record>
+	
+
+	<record model="ir.actions.act_window" id="reparadas_list_action">
+		<field name="name">Reparadas</field>
+		<field name="res_model">partes.reparadas</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+	</record>
+   </data>
+</openerp>

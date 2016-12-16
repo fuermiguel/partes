@@ -39,6 +39,7 @@
         'views/papisbalizamiento.xml',
         'views/circuitosbalizamiento.xml',
         'views/menu.xml',
+        'views/reparadas.xml',
         #'datas/partes_datas.xml'
     ],
     # only loaded in demonstration mode
