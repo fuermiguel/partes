@@ -40,6 +40,7 @@
         'views/circuitosbalizamiento.xml',
         'views/menu.xml',
         'views/reparadas.xml',
+        #'security/security.xml',
         #'datas/partes_datas.xml'
     ],
     # only loaded in demonstration mode

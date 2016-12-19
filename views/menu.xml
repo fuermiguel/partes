@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 
-<menuitem id="main_partes_menu" name="Partes diarios"/>
+<menuitem id="main_partes_menu" name="Partes diarios" />
 	<menuitem id="partes_menu" name="Partes diarios" parent="main_partes_menu" sequence="10"/>
 		<menuitem id="partes_balizamiento_menu" name="Balizamiento" parent="partes_menu"  action="balizamiento_list_action"/>
 	<menuitem id="partes_configuracion_menu" name="Configuracion" parent="main_partes_menu" sequence="20"/>

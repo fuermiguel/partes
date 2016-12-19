@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	    
+	    <record id="grp_turnos" model="res.groups">
+	        <field name="name">turnos</field>
+            </record>
+	
+	</data>
+</openerp>
